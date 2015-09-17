@@ -8,6 +8,7 @@ function wl_mico_wp5_export(){
 	// Retrieve all published data
 	$posts = get_posts( array(
 		'post_status' => 'publish',
+		'numberposts' => 'any',
 		), OBJECT );
 
 	// Loop on retrieved data to compose post objects collection
