@@ -1,0 +1,1 @@
+$(function(){"video".playbackRate=.5}),$(function(){$("video").on("mouseenter",function(){this.paused&&(this.play().playbackRate=.5)}).on("mouseleave",function(){this.paused||this.pause()})});
