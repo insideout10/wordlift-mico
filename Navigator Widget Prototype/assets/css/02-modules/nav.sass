@@ -1,0 +1,27 @@
+nav#wl-nav
+  position: fixed
+  display: block
+  top: 0
+  left: 0
+  max-width: 200px
+  height: 100vh
+  background-color: $wl-nav-bg-c
+  @media screen and (max-width: 1280px)
+    display: none
+
+  a.uk-navbar-brand
+    display: block
+    margin-bottom: 40px
+
+  ul
+    li
+      width: 100%
+      a
+        display: block
+        padding: 5px 8px
+        &.wl-intro
+          color: $wl-intro-c
+        &.wl-160
+          color: $wl-160-c
+        &.wl-190
+          color: $wl-190-c

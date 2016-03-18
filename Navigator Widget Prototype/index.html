@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>
+      MICO Navigator Prototype
+    </title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="nicola bertelloni">
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="assets/vendors/uikit/css/uikit.min.css">
+    <link rel="stylesheet" href="assets/css/master.css">
+
+    <!-- SCRIPTS -->
+    <script src="assets/vendors/jquery/dist/jquery.js" charset="utf-8"></script>
+    <script src="assets/vendors/uikit/js/components/sticky.min.js"></script>
+    <script src="assets/vendors/uikit/js/uikit.min.js" charset="utf-8"></script>
+    <script src="assets/vendors/gsap/src/uncompressed/TweenMax.js" charset="utf-8"></script>
+    <script src="assets/js/mock-change.js" charset="utf-8"></script>
+
+    <!-- HTML IMPORT LINK -->
+    <link rel="import" id="wl-mock-160-s1-import" href="wl-code/160/s1.html">
+    <link rel="import" id="wl-mock-160-s2-import" href="wl-code/160/s2.html">
+    <link rel="import" id="wl-mock-190-s1-import" href="wl-code/190/s1.html">
+    <link rel="import" id="wl-mock-190-s2-import" href="wl-code/190/s2.html">
+    <link rel="import" id="wl-mock-video-import" href="wl-code/video/wl-mock.html">
+
+  </head>
+
+  <body>
+    <nav id="wl-nav" class="uk-navbar">
+      <a href="#" class="uk-navbar-brand"></a>
+      <ul data-uk-scrollspy-nav="{closest: 'li', smoothscroll: {offset: 80}}" class="uk-navbar-nav uk-visible-large">
+
+        <li><a href="#wl-premessa" class="wl-intro">Premessa</a></li>
+        <li><a href="#wl-hick" class="wl-intro">Favorire la scelta</a></li>
+        <li><a href="#wl-grids" class="wl-intro">Griglie di costruzione</a></li>
+        <li><a href="#wl-be-panel" class="wl-intro">Pannello di backend</a></li>
+        <li><a href="#wl-colori" class="wl-intro">Palettes Colori</a></li>
+        <li><a href="#wl-img" class="wl-intro">Uso delle immagin</a></li>
+
+        <li><a href="#wl-160-intro" class="wl-160">Box di 160 px</a></li>
+        <li><a href="#wl-160-p1" class="wl-160">160 px – Soluzione 1</a></li>
+        <li><a href="#wl-160-p2" class="wl-160">160 px – Soluzione 2</a></li>
+
+        <li><a href="#wl-190-intro" class="wl-190">Box di 190 px</a></li>
+        <li><a href="#wl-190-p1" class="wl-190">190 px – Soluzione 1</a></li>
+        <li><a href="#wl-190-p2" class="wl-190">190 px – Soluzione 2</a></li>
+
+      </ul>
+    </nav>
+
+    <header>
+
+      <h1>Navigator</h1>
+      <h2 class="uk-margin-top">Un widget di <strong>WordLift</strong></h2>
+
+    </header>
+
+    <section class="wl-intro">
+
+      <article id="wl-premessa">
+        <h3 class="wl-intro">Premezza</h3>
+        <p>Mi è stato chiesto di ripensare l'aspetto di Navigator, widget del plugin Wordlift. Lo scopo è rendere il prodotto meno invasivo e più strutturato per facilitarne l'inserimento all'interno della pagina web.
+          <br> Mi è stato chiesto di valorizzare il contenuto visivo e di valutare la modularità del prodotto per facilitarne l'integrazione in un'ampio spettro di contesti.
+          <br> Ho cominciato valutando l'ambiente per cui è stato realizzato. Ho preso in considerazione due griglie di dimensioni diverse: una di ampiezza massima di 960px e una di 1040px.
+        </p>
+      </article>
+
+      <article id="wl-prima">
+        <h3 class="wl-intro">Stato attuale</h3>
+        <img src="assets/img/png/old/nav-old.png" class="uk-align-center">
+        <p>
+          Il pugin al momento si presenta in modo confuso.
+          <br> Alle immagini non viene lasciato nessun respiro e la scelta di comprimere l'altezza del plugin compromette la leggibilità del testo e dell'immagine.
+          <br> La proposta che viene offerta al lettore non appare immediatamente comprensibile, è del tutto assente una preview di quello che andrà a leggere cliccando sul link. Non viene fatto nessun uso del colore, né viene proposta al blogger la possibilità
+          di inserire un colore di riferimento.
+        </p>
+      </article>
+
+      <article id="wl-hick">
+        <h3 class="wl-intro">Favorire la scelta</h3>
+        <div class="uk-panel-box">
+          <p>
+            La legge di Hick afferma che il tempo necessario per prendere una decisione varia in funzione del numero di opzioni disponibili. La legge di Hick influisce sul design di qualunque sistema o processo che richieda l’adozione di decisioni semplici a fronte
+            di più opzioni.
+            <br> Tutte le attività prevedono quattro fasi fondamentali:
+          </p>
+
+          <ol>
+            <li>Identificazione di un problema o obiettivo.</li>
+            <li>Valutazione delle opzioni disponibili per risolvere il problema o conseguire un risultato.</li>
+            <li>Scelta di un’opzione.</li>
+            <li>Implementazione dell’opzione.</li>
+          </ol>
+
+          <p class="uk-margin-small">
+            La legge di Hick è applicabile soprattutto alle attività che prevedano l’adozione di decisioni semplici in base a una corrispondenza univoca tra stimolo e risposta. Nella progettazione di attività che prevedano una capacità di risposta tempestiva, è opportuno
+            ridurre al minimo il numero di opzioni, in modo da limitare i tempi di risposta e la possibilità di errori.
+          </p>
+        </div>
+        <p>
+          Il tempo a nostra disposizione per catturare l'attenzione del lettore e generare click è infinitesimale, per questo motivo ho scelto di limitare la scelta dell'utente a un massimo di quattro opzioni. Quattro opzioni coprono le quattro entità di WL e
+          allo stesso tempo si incastrano nella pagina senza disturbare il lettore.
+
+        </p>
+      </article>
+
+      <article id="wl-grids">
+        <h3 class="wl-intro">Griglie di costruzione</h3>
+        <p>
+          Per raggiungere il suo scopo, Navigator non può non essere pensato perché si inserisca coerentemente in diversi tipi di ambiente. Non conoscendo i diversi layout in cui questo plugin andrà a inserirsi mi sono affidato alle griglie di costruzione. Dopo
+          aver studiato le griglie utilizzate nelle pagine web di potenziali utilizzatori di WL, ho scelto di costruire il prodotto su due standard diversi: una griglia costruita su un'ampiezza massima di 960 px e una su un ampiezza massima di 1040 px.
+        </p>
+
+        <article id="wl-griglia160">
+          <img src="assets/img/grids/grid.png" alt="">
+        </article>
+
+        <article id="wl-griglia190">
+          <img src="assets/img/grids/grid2.png" alt="">
+        </article>
+
+      </article>
+
+      <article id="wl-be-panel">
+        <h3 class="wl-intro">Pannello di backend</h3>
+        <p>
+          Allo stato dei fatti Navigator non propone nessuna possibilità di personallizzazione del plugin. Valutando lo scopo e la necessità di integrazione che un widget di questo tipo deve soddisfare, potrebbe essere interessante valutare la possibilità di un minimo grado di personalizzazione del layout. <br>
+          Proporrei di lasciare la libertà al blogger di intervenire sull'aspetto dell'widget. In particolare:
+        </p>
+        <ol>
+          <li>Possibilità di scegliere tra un ventaglio di layout preimpostati</li>
+          <li>Possibilità di attivare e disattivare colori per l'identificazione del tipo di legame che lega le due entità</li>
+          <li>Attivazione e disattivazione di una brevissima preview dell'articolo</li>
+          <li>Possibilità di inserire video</li>
+        </ol>
+      </article>
+
+      <article id="wl-colori">
+        <h3 class="wl-intro">Palettes Colori</h3>
+        <p>
+          Per identificare le singole entità all'interno del plugin ho scelto di utilizzare delle flag con lo sfondo di quattro colori diversi. Ho deciso di inserire questa opzione per consentire al lettore di identificare a colpo d'occhio la direzione che prenderà il suo percorso di lettura seguendo il link consigliato.
+          <br> Ho scelto di proporre all'autore due palette colori simili fra loro allo stesso tempo adatte ad ambienti diversi, mantenendo la possibilità di disattivare il colore e mantenere il flag dell'entità a cui fa riferimento la card.
+        </p>
+
+        <div class="uk-panel-box">
+          <h5 class="wl-intro">Palette colori 1</h5>
+          <div class="wl-palette-1">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <h5 class="wl-intro">Palette colori 2</h5>
+          <div class="wl-palette-2">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </article>
+
+      <article id="wl-img">
+        <h3 class="wl-intro">Uso delle immagini</h3>
+        <p>
+          Le immagini giocano un ruolo chiave nel percorso percettivo/decisionale del lettore. Mi sono impegnato a costruire un modulo che avesse l'immagine come elemento principe e interattivo. Nel corso del progetto
+          di progettazione ho valutato la possibilità di sostituire l'immagine con un video, in condizioni ottimali di connessione, quindi sostituendo il video con un immagine se l'utente si collega da mobile o tablet. L'inserimento dei video può essere
+          un elemnto di approfondimento purché si restringa la sua portata comunicativa:
+        </p>
+        <ol>
+          <li>Il video viene riprodotto senza audio</li>
+          <li>La velocità di riproduzione viene rallentata a un quarto di quella normale</li>
+          <li>L'autoplay del video viene attivato soltanto nel momento in cui l'utente sposta il mouse nell'area della card</li>
+        </ol>
+        <p class=" uk-margin-small">
+          Queste condizioni ci consentono di trsformare il video in un'immagine in movimento e quindi di incuriosire il lettore senza disturbare la sua esperienza di navigazione con un contenuto troppo invasivo.
+        </p>
+
+        <div id="wl-video-mock-ref">
+          <script>
+            var getImport = document.querySelector('#wl-mock-video-import');
+            var getContent = getImport.import.querySelector('#wl-mock-video-s1-import');
+            document.getElementById('wl-video-mock-ref').appendChild(document.importNode(getContent, true));
+
+          </script>
+          <script>
+            var getImport = document.querySelector('#wl-mock-video-import');
+            var getContent = getImport.import.querySelector('#wl-mock-video-s2-import');
+            document.getElementById('wl-video-mock-ref').appendChild(document.importNode(getContent, true));
+
+          </script>
+        </div>
+
+      </article>
+
+
+    </section>
+
+
+    <!-- PROPOSTA BOX DI 160PX -->
+    <section class="wl-160">
+      <h3 class="wl-160">Box di 160 px</h3>
+
+      <article id="wl-160-intro">
+        <p>
+          Le due soluzioni che sto presentando sono state progettate su una griglia totale di 960px, all'interno ho distinto tre colonne da 320px. Considederando una colonna utile a ospitare un'eventuale sidebar ho sfruttato i restanti 640px per offrire al lettore una visione sinottica delle possibilità di scelta.
+        </p>
+      </article>
+
+      <article id="wl-160-img">
+        <div class="wl-mock-global wl-mock-160">
+        </div>
+      </article>
+
+      <section id="wl-160-p1">
+        <h3 class="wl-160">Box 160px – Soluzione 1</h3>
+
+        <article id="wl-160-p1-code">
+          <!-- here goes the image -->
+
+          <script>
+            var getImport = document.querySelector('#wl-mock-160-s1-import');
+            var getContent = getImport.import.querySelector('#wl-mock-160-s1-1');
+            document.getElementById('wl-160-p1-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+          <script>
+            var getImport = document.querySelector('#wl-mock-160-s1-import');
+            var getContent = getImport.import.querySelector('#wl-mock-160-s1-2');
+            document.getElementById('wl-160-p1-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+          <script>
+            var getImport = document.querySelector('#wl-mock-160-s1-import');
+            var getContent = getImport.import.querySelector('#wl-mock-160-s1-3');
+            document.getElementById('wl-160-p1-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+          <script>
+            var getImport = document.querySelector('#wl-mock-160-s1-import');
+            var getContent = getImport.import.querySelector('#wl-mock-160-s1-4');
+            document.getElementById('wl-160-p1-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+
+        </article>
+
+        <h3 class="wl-160">Box 160px – Soluzione 1 – Scala di grigi</h3>
+        <article id="wl-160-p1-bn-code">
+          <!-- here goes the image -->
+          <script>
+            var getImport = document.querySelector('#wl-mock-160-s1-import');
+            var getContent = getImport.import.querySelector('#wl-mock-160-s1-1');
+            document.getElementById('wl-160-p1-bn-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+          <script>
+            var getImport = document.querySelector('#wl-mock-160-s1-import');
+            var getContent = getImport.import.querySelector('#wl-mock-160-s1-2');
+            document.getElementById('wl-160-p1-bn-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+          <script>
+            var getImport = document.querySelector('#wl-mock-160-s1-import');
+            var getContent = getImport.import.querySelector('#wl-mock-160-s1-3');
+            document.getElementById('wl-160-p1-bn-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+          <script>
+            var getImport = document.querySelector('#wl-mock-160-s1-import');
+            var getContent = getImport.import.querySelector('#wl-mock-160-s1-4');
+            document.getElementById('wl-160-p1-bn-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+
+        </article>
+
+      </section>
+
+      <section id="wl-160-p2">
+
+        <h3 class="wl-160">Box 160px – Soluzione 2</h3>
+        <article id="wl-160-p2-code">
+          <!-- here goes the image -->
+          <script>
+            var getImport = document.querySelector('#wl-mock-160-s2-import');
+            var getContent = getImport.import.querySelector('#wl-mock-160-s2-1');
+            document.getElementById('wl-160-p2-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+          <script>
+            var getImport = document.querySelector('#wl-mock-160-s2-import');
+            var getContent = getImport.import.querySelector('#wl-mock-160-s2-2');
+            document.getElementById('wl-160-p2-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+          <script>
+            var getImport = document.querySelector('#wl-mock-160-s2-import');
+            var getContent = getImport.import.querySelector('#wl-mock-160-s2-3');
+            document.getElementById('wl-160-p2-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+          <script>
+            var getImport = document.querySelector('#wl-mock-160-s2-import');
+            var getContent = getImport.import.querySelector('#wl-mock-160-s2-4');
+            document.getElementById('wl-160-p2-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+
+        </article>
+
+
+        <h3 class="wl-160">Box 160px – Soluzione 2 – Scala di grigi</h3>
+        <article id="wl-160-p2-bn-code">
+          <!-- here goes the image -->
+          <script>
+            var getImport = document.querySelector('#wl-mock-160-s2-import');
+            var getContent = getImport.import.querySelector('#wl-mock-160-s2-1');
+            document.getElementById('wl-160-p2-bn-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+          <script>
+            var getImport = document.querySelector('#wl-mock-160-s2-import');
+            var getContent = getImport.import.querySelector('#wl-mock-160-s2-2');
+            document.getElementById('wl-160-p2-bn-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+          <script>
+            var getImport = document.querySelector('#wl-mock-160-s2-import');
+            var getContent = getImport.import.querySelector('#wl-mock-160-s2-3');
+            document.getElementById('wl-160-p2-bn-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+          <script>
+            var getImport = document.querySelector('#wl-mock-160-s2-import');
+            var getContent = getImport.import.querySelector('#wl-mock-160-s2-4');
+            document.getElementById('wl-160-p2-bn-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+
+        </article>
+
+      </section>
+
+    </section>
+
+
+    <!-- PROPOSTA BOX DI 190PX  -->
+    <section class="wl-190">
+      <h3 class="wl-190">Box di 190 px</h3>
+
+      <article id="wl-190-intro">
+        <p>
+          Le due soluzioni che sto presentando sono state progettate su una griglia totale di 1040px, all'interno ho distinto una zezione da 760px per il testo corrente e una da 280px destinata alla sidebar. Ho sfruttato i 760px del contenitore principale per offrire al lettore una visione sinottica delle possibilità di scelta.
+
+        </p>
+      </article>
+
+
+      <section id="wl-190-p1">
+
+        <h3 class="wl-190">Box 190px – Soluzione 1</h3>
+        <article id="wl-190-p1-code">
+          <!-- here goes the image -->
+          <script>
+            var getImport = document.querySelector('#wl-mock-190-s1-import');
+            var getContent = getImport.import.querySelector('#wl-mock-190-s1-1');
+            document.getElementById('wl-190-p1-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+          <script>
+            var getImport = document.querySelector('#wl-mock-190-s1-import');
+            var getContent = getImport.import.querySelector('#wl-mock-190-s1-2');
+            document.getElementById('wl-190-p1-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+          <script>
+            var getImport = document.querySelector('#wl-mock-190-s1-import');
+            var getContent = getImport.import.querySelector('#wl-mock-190-s1-3');
+            document.getElementById('wl-190-p1-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+          <script>
+            var getImport = document.querySelector('#wl-mock-190-s1-import');
+            var getContent = getImport.import.querySelector('#wl-mock-190-s1-4');
+            document.getElementById('wl-190-p1-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+
+        </article>
+
+        <h3 class="wl-190">Box 190px – Soluzione 1 – Scala di grigi </h3>
+        <article id="wl-190-p1-bn-code">
+          <!-- here goes the image -->
+          <script>
+            var getImport = document.querySelector('#wl-mock-190-s1-import');
+            var getContent = getImport.import.querySelector('#wl-mock-190-s1-1');
+            document.getElementById('wl-190-p1-bn-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+          <script>
+            var getImport = document.querySelector('#wl-mock-190-s1-import');
+            var getContent = getImport.import.querySelector('#wl-mock-190-s1-2');
+            document.getElementById('wl-190-p1-bn-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+          <script>
+            var getImport = document.querySelector('#wl-mock-190-s1-import');
+            var getContent = getImport.import.querySelector('#wl-mock-190-s1-3');
+            document.getElementById('wl-190-p1-bn-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+          <script>
+            var getImport = document.querySelector('#wl-mock-190-s1-import');
+            var getContent = getImport.import.querySelector('#wl-mock-190-s1-4');
+            document.getElementById('wl-190-p1-bn-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+
+        </article>
+
+      </section>
+
+      <section id="wl-190-p2">
+
+        <h3 class="wl-190">Box 190px – Soluzione 2</h3>
+        <article id="wl-190-p2-code">
+          <!-- here goes the image -->
+          <script>
+            var getImport = document.querySelector('#wl-mock-190-s2-import');
+            var getContent = getImport.import.querySelector('#wl-mock-190-s2-1');
+            document.getElementById('wl-190-p2-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+          <script>
+            var getImport = document.querySelector('#wl-mock-190-s2-import');
+            var getContent = getImport.import.querySelector('#wl-mock-190-s2-2');
+            document.getElementById('wl-190-p2-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+          <script>
+            var getImport = document.querySelector('#wl-mock-190-s2-import');
+            var getContent = getImport.import.querySelector('#wl-mock-190-s2-3');
+            document.getElementById('wl-190-p2-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+          <script>
+            var getImport = document.querySelector('#wl-mock-190-s2-import');
+            var getContent = getImport.import.querySelector('#wl-mock-190-s2-4');
+            document.getElementById('wl-190-p2-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+        </article>
+
+        <h3 class="wl-190">Box 190px – Soluzione 2 – Scala di grigi</h3>
+        <article id="wl-190-p2-bn-code">
+          <!-- here goes the image -->
+          <script>
+            var getImport = document.querySelector('#wl-mock-190-s2-import');
+            var getContent = getImport.import.querySelector('#wl-mock-190-s2-1');
+            document.getElementById('wl-190-p2-bn-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+          <script>
+            var getImport = document.querySelector('#wl-mock-190-s2-import');
+            var getContent = getImport.import.querySelector('#wl-mock-190-s2-2');
+            document.getElementById('wl-190-p2-bn-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+          <script>
+            var getImport = document.querySelector('#wl-mock-190-s2-import');
+            var getContent = getImport.import.querySelector('#wl-mock-190-s2-3');
+            document.getElementById('wl-190-p2-bn-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+          <script>
+            var getImport = document.querySelector('#wl-mock-190-s2-import');
+            var getContent = getImport.import.querySelector('#wl-mock-190-s2-4');
+            document.getElementById('wl-190-p2-bn-code').appendChild(document.importNode(getContent, true));
+
+          </script>
+
+        </article>
+
+      </section>
+
+    </section>
+
+  </body>
+
+</html>
